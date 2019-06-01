@@ -1,0 +1,27 @@
+{
+  "name": "rxnodets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node-dev src/bin/www.ts",
+    "set1": "npm i -g rxjs-tslint",
+    "set2": "npm install rxjs@6 rxjs-compat@6 --save"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mongoose": "^5.5.1",
+    "@types/node": "^12.0.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.0",
+    "filewatcher": "^3.0.1",
+    "mongoose": "^5.5.9",
+    "randomstring": "^1.1.5",
+    "rxjs": "^6.5.2",
+    "ts-node-dev": "^1.0.0-pre.39",
+    "typescript": "^3.4.5"
+  }
+}
