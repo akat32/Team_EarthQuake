@@ -11,8 +11,9 @@ interface IDonate extends mongoose.Document {
     y: Number,
     z: Number,
     price: Number,
-    userEmail: String
-    token: String
+    userEmail: String,
+    token: String,
+    damage: Number
 }
 const DonateSchema = new mongoose.Schema({
     title : String,
@@ -25,7 +26,8 @@ const DonateSchema = new mongoose.Schema({
     z: Number,
     price: { type : Number, default: 0},
     userEmail: String,
-    token: String
+    token: String,
+    damage: {type: Number, default: 0}
 })
 
 export const Donate = mongoose.model<IDonate>("donate", DonateSchema);

@@ -12,7 +12,8 @@ interface IUsers extends mongoose.Document {
         donate: Number,
         address: String,
         price: Number,
-        token: String
+        token: String,
+        damage: Number
     }],
     myBidding: [{
         title: String,
@@ -20,7 +21,8 @@ interface IUsers extends mongoose.Document {
         donate: Number,
         address: String,
         price: Number,
-        token: String    
+        token: String,
+        damage: Number   
     }],
     myRequest: [{
         title: String,
@@ -28,7 +30,8 @@ interface IUsers extends mongoose.Document {
         donate: Number,
         address: String,
         price: Number,
-        token: String
+        token: String,
+        damage: Number
     }]
 }
 const UserSchema = new mongoose.Schema({
@@ -43,7 +46,8 @@ const UserSchema = new mongoose.Schema({
         donate: Number,
         address: String,
         price: Number,
-        token: String
+        token: String,
+        damage: Number
     }],
     myBidding: [{
         title: String,
@@ -51,7 +55,8 @@ const UserSchema = new mongoose.Schema({
         donate: Number,
         address: String,
         price: Number,
-        token: String
+        token: String,
+        damage: Number
     }],
     myRequest: [{
         title: String,
@@ -59,7 +64,8 @@ const UserSchema = new mongoose.Schema({
         donate: Number,
         address: String,
         price: Number,
-        token: String
+        token: String,
+        damage: Number
     }]
 })
 

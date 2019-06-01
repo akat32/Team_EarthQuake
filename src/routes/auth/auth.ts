@@ -21,6 +21,21 @@ const auth = {
             return res.status(400).json({message : "ERR!"})
         }
         return res.status(200).json({user : new_user})
+    },
+    donationlist: async (req: Request, res: Response)=> {
+        let result = await Users.findOne({token : req.body.token})
+        if(!result) return res.status(404).json({message: "Not Found!"})
+        else return res.status(200).json({list : result.myDonate})
+    },
+    biddinglist: async (req: Request, res: Response)=> {
+        let result = await Users.findOne({token : req.body.token})
+        if(!result) return res.status(404).json({message: "Not Found!"})
+        else return res.status(200).json({list : result.myBidding})
+    },
+    requestlist: async (req: Request, res: Response)=> {
+        let result = await Users.findOne({token : req.body.token})
+        if(!result) return res.status(404).json({message: "Not Found!"})
+        else return res.status(200).json({list : result.myRequest})
     }
 }
 
