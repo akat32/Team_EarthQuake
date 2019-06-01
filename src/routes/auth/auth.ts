@@ -4,8 +4,9 @@ import { Users } from '../../DB'
 import randomstring from 'randomstring'
 const auth = {
     signin: async (req: Request, res: Response, next: NextFunction) => {
-        let result = await Users.find()
-        return res.status(200).json(result)
+        let result = await Users.findOne(req.body)
+        if(result) return res.status(200).json(result)
+        else return res.status(404).json({message : "Users Not Found!"})
     },
     signup: async (req: Request, res: Response, next: NextFunction) => {
         let new_user = new Users({

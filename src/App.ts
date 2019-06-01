@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({limit: '1gb', extended: false }));
 
 import { auth } from './routes'
 
-app.get('/signin', auth.signin)
+app.post('/signin', auth.signin)
+app.post('/signup', auth.signup)
 
 export default app
