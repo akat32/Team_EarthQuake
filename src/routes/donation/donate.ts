@@ -1,8 +1,7 @@
 import { Response, Request, NextFunction } from 'express'
 
 import { Users, Donate } from '../../DB'
-import randomstring from 'randomstring'
-import { equal } from 'assert';
+import * as randomstring from 'randomstring'
 
 const donate = {
     newDonate: async (req: Request, res: Response)=> {
@@ -35,7 +34,7 @@ const donate = {
         return res.status(200).json({message : "success!"})
     },
     bidding: async (req: Request, res: Response)=>{
-        
+
     },
     donate: async (req: Request, res: Response)=> {
 

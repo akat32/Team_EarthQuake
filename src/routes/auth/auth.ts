@@ -1,7 +1,7 @@
 import { Response, Request, NextFunction } from 'express'
 
 import { Users } from '../../DB'
-import randomstring from 'randomstring'
+import * as randomstring from 'randomstring'
 const auth = {
     signin: async (req: Request, res: Response, next: NextFunction) => {
         let result = await Users.findOne(req.body)

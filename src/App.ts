@@ -3,7 +3,7 @@ import * as bodyParser from 'body-parser'
 import * as cors from 'cors'
 import * as path from 'path'
 import * as multer from 'multer'
-import randomstring from 'randomstring'
+import * as randomstring from 'randomstring'
 const app = express()
 
 app.use(cors())
@@ -35,6 +35,7 @@ app.post('/biddinglist', auth.biddinglist)
 app.post('/requestList', auth.requestlist)
 
 app.post('/newdonation', upload.single('photo'), donate.newDonate)
+
 app.post('/donationList', donate.loadList)
 app.post('/loadDonate', donate.loadDonate)
 export default app
