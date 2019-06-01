@@ -41,7 +41,7 @@ const donate = {
     },
     loadList: async(req: Request, res: Response)=> {
         let result = await Donate.find()
-        return res.statsu(200).json({list : result})
+        return res.status(200).json({list : result})
     },
     loadDonate: async(req: Request, res: Response)=> {
         let result = await Donate.findOne({token : req.body.donateToken})
