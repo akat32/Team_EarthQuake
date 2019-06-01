@@ -10,9 +10,10 @@ const auth = {
     },
     signup: async (req: Request, res: Response, next: NextFunction) => {
         let new_user = new Users({
-            id: req.body.id,
+            email: req.body.email,
             passwd: req.body.passwd,
-            token: randomstring.generate(25)
+            token: randomstring.generate(25),
+            isCompany: req.body.isCompany
         })
         try {
             let result = await new_user.save()

@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose"
 import { Users } from './Schema/Users/Users'
-
+import { Donate } from './Schema/Donation/Donate'
 const uri: string = "mongodb://127.0.0.1:27017/DBName";
 
 let db = mongoose.connect(uri, (err: any) => {
@@ -11,4 +11,4 @@ let db = mongoose.connect(uri, (err: any) => {
   }
 });
 
-export { Users }
+export { Users, Donate }
