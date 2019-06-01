@@ -36,6 +36,6 @@ app.post('/requestList', auth.requestlist)
 
 app.post('/newdonation', upload.single('photo'), donate.newDonate)
 
-app.post('/donationList', donate.loadList)
+app.post('/donateList', donate.loadList)
 app.post('/loadDonate', donate.loadDonate)
 export default app
