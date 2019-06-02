@@ -10,6 +10,7 @@ interface IDonate extends mongoose.Document {
     x: Number,
     y: Number,
     z: Number,
+    biddingCompany: String, // company token
     price: Number,
     userEmail: String,
     token: String,
@@ -21,6 +22,7 @@ const DonateSchema = new mongoose.Schema({
     adress: String,
     donate: {type : Number, default: 0}, // 현재 기부 금액
     photoUrl: String,
+    biddingCompany: String,
     x: Number,
     y: Number,
     z: Number,
