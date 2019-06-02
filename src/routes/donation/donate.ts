@@ -13,7 +13,7 @@ const donate = {
             y: req.body.y,
             userEmail: req.body.userEmail,
             token: randomstring.generate(30),
-            photoUrl: '/home/ubuntu/Team_EarthQuake/public/photo/' + req.file.filename,
+            photoUrl: '/home/ubuntu/Team_EarthQuake/src/public/photo/' + req.file.filename,
             damage: req.body.damage
         })
         try {
@@ -21,7 +21,7 @@ const donate = {
             let Uresult = await Users.update({token : req.body.token}, {
                 $push: { myRequest: {        
                     title: req.body.title,
-                    photoUrl : '/home/ubuntu/Team_EarthQuake/public/photo/' + req.file.filename,
+                    photoUrl : '/home/ubuntu/Team_EarthQuake/src/public/photo/' + req.file.filename,
                     address: req.body.address,
                     token: newDonate.token,
                     damage: req.body.damage

@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var storage = multer.diskStorage({
     destination: (req: express.Request,file,cb)=>{
-      cb(null, '/home/ubuntu/Team_EarthQuake/public/photo/'); //C:\\Users\\parktea\\Desktop\\17Appjam\\public
+      cb(null, '/home/ubuntu/Team_EarthQuake/src/public/photo/'); //C:\\Users\\parktea\\Desktop\\17Appjam\\public
     },
     filename: (req: express.Request,file,cb)=>{
       var newStr = randomstring.generate(33);
